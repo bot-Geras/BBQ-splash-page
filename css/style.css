@@ -13,6 +13,8 @@ body {
 h1 {
     font-size: 2.25rem;
     font-weight: 300;
+    color: #fff;
+    margin: 2em 0;
 
 }
 
@@ -21,6 +23,7 @@ h1 + p {
     font-weight: 900;
     font-size: 1.3125rem;
     text-transform: uppercase;
+    margin: 0;
 }
 
 strong {
@@ -33,6 +36,7 @@ strong {
     color: #F18119;
     text-transform: uppercase;
     letter-spacing: 2px;
+    order: -1;
 
 }
 
@@ -54,7 +58,18 @@ h2 + p {
 }
 
 /* =================
-   Layout 
+   Intro Section 
    =================  */
 
-   
+.intro {
+    background-color: #404040;
+    background-image: url(../images/dark-ribs.jpg);
+    padding: 0 .25em 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
