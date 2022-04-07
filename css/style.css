@@ -6,7 +6,8 @@ body {
     color: #404040;
 }
 
- /* =================
+
+/* =================
    Typography 
    =================  */
 
@@ -18,7 +19,7 @@ h1 {
 
 }
 
-h1 + p {
+h1+p {
     color: #F18119;
     font-weight: 900;
     font-size: 1.3125rem;
@@ -42,14 +43,16 @@ strong {
 
 h2 {
     font-size: 1.3125rem;
+    margin: 0;
 
 }
 
-h2 + p {
+h2+p {
     text-transform: uppercase;
     color: #F18119;
     font-weight: 900;
     font-size: 1rem;
+    margin-top: 0;
 }
 
 .fine-print {
@@ -61,15 +64,54 @@ h2 + p {
    Intro Section 
    =================  */
 
+
 .intro {
     background-color: #404040;
     background-image: url(../images/dark-ribs.jpg);
-    padding: 0 .25em 1em;
+    background-size: cover;
+    background-position: center;
+    padding: 0 .5em 2em;
     display: flex;
     flex-direction: column;
 }
 
+/* =================
+   Main Section 
+   =================  */
 
+.main-content {
+    padding: 2em 1em;
 
+}
 
+/* =================
+   Media Query 
+   =================  */
 
+@media (min-width: 510px) {
+
+    body {
+        font-size: 1.125rem;
+        display: flex;
+    }
+
+    /* =================
+   Topography for Large Screens 
+   =================  */
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2,
+    h1+p {
+        font-size: 1.75rem;
+    }
+
+    intro,
+    .main-content {
+        width: 50%;
+
+    }
+
+}
