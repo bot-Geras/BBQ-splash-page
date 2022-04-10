@@ -20,7 +20,7 @@ h1 {
     font-size: 2.25rem;
     font-weight: 300;
     color: #fff;
-    margin: 2em 0;
+    margin: 0;
 
 }
 
@@ -37,12 +37,16 @@ strong {
 }
 
 .top-text {
+    padding-top: 2px;
+    margin: 0;
     font-size: .625rem;
     font-weight: 900;
     color: #F18119;
     text-transform: uppercase;
     letter-spacing: 2px;
     order: -1;
+    border-top: 5px solid #F18119;
+    border-image: linear-gradient(to left,#FF713B, #FFA51D) 1;
 
 }
 
@@ -65,20 +69,28 @@ h2+p {
     letter-spacing: 1px;
 }
 
+
+
 /* =================
    Intro Section 
    =================  */
 
 
 .intro {
-    background-color: #404040;
-    background-image: url(../images/dark-ribs.jpg);
+    /* background-color: #404040; */
+    background-image: url(../images/ribs.jpg), linear-gradient(45deg,red, blue);
+    background-blend-mode: multiply;
     background-size: cover;
     background-position: center;
     padding: 0 .5em 2em;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    min-height: 50vh;
+
 }
+
+
 
 /* =================
    Main Section 
@@ -88,6 +100,94 @@ h2+p {
     padding: 2em 1em;
 
 }
+
+/* .intro *,
+.main-content * {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    
+} */
+
+/* OR */
+
+.intro>*,
+.main-content>* {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/* .container {
+    max-width: 400px;
+    margin: 0 auto;
+  
+}
+
+.container-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 50vh;
+
+} */
+
+/* =================
+   Forms
+   =================  */
+
+.email-collector {
+    width: 80%;
+    max-width: 300px;
+}
+
+input,
+.btn {
+    width: 100%;
+    border-radius: 5px;
+
+}
+
+input {
+    font-family: inherit;
+    text-align: inherit;
+    margin-bottom: .75em;
+    padding: .25em;
+    border: 1px solid #404040;
+    transform: scale(1);
+    transition: transform 250ms;
+
+}
+
+input:focus {
+    transform: scale(1.1);
+}
+
+.btn {
+    display: inline-block;
+    font-size: .625em;
+    padding: 1em 1.5em;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border: 0;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: #fff;
+    background-image: linear-gradient(to left, #FF713B, #FFA51D);
+    transform: scale(1);
+    transition: transform 250ms;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    transform: scale(1.1);
+}
+
+
 
 /* =================
    Media Query 
@@ -125,5 +225,9 @@ h2+p {
         flex-direction: column;
         justify-content: center;
     }
+
+    /* .container-intro {
+        height: 100%;
+    } */
 
 }

@@ -13,12 +13,14 @@
   </head>
   <body>
     <div class="intro">
+      <!-- <div class="container container-intro"></div> -->
       <h1>Learn how to make <strong>the best BBQ ribs</strong> in town</h1>
       <p>Join us for this live webinar</p>
       <p class="top-text">Mouthwateringly delicious</p>
     </div>
 
-    <div class="main-content">
+    <div id="Main-Content" class="main-content">
+      <!-- <div class="container"></div> -->
       <h2>Become a BBQ master!</h2>
       <p>Register Today</p>
       <p>
@@ -27,11 +29,17 @@
         learn from the best. You can do just that by signing up for this free
         webinar!
       </p>
+     
+      <form id="Email-Collector" class="email-collector" action="#" method="post">
+        <input name="firstName" type="text" required placeholder="first name" />
+        <input name="emailAddress" type="email" required placeholder="email" />
+        <button  class="btn btn-primary" type="submit">register</button>
+      </form>
       <p class="fine-print">
         We'll never share your information without your permission
       </p>
-
-      <!-- form -->
     </div>
+
+    <script src="index.js"></script>
   </body>
 </html>
